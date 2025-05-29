@@ -119,9 +119,12 @@
             left: name.adjustedX + 'px',
             bottom: name.adjustedY + 'px',
             fontSize: Math.max(10, 18 - name.rarity * 6) / zoomLevel + 'px',
-            color: selectedName?.reading === name.reading ? '#ef4444' : '#374151',
+            color: name.rarity >= 0.65 
+              ? `hsl(0, 0%, ${selectedName?.reading === name.reading ? '20%' : '40%'})` 
+              : `hsl(${240 - (name.femininity * 240)}, 70%, ${selectedName?.reading === name.reading ? '20%' : '30%'})`,
             fontWeight: selectedName?.reading === name.reading ? 'bold' : 'normal',
             opacity: Math.max(0.3, 1 - name.rarity * 0.7),
+            textShadow: '1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white, 0 0 4px white',
             zIndex: selectedName?.reading === name.reading ? 25 : 10
           }"
           @click="handleNameClick(name, $event)"
@@ -153,20 +156,32 @@ const emit = defineEmits<{
   selectName: [name: NameScore];
 }>();
 
-const xAxis = ref<AxisType>('femininity');
-const yAxis = ref<AxisType>('softness');
+const xAxis = ref<AxisType>('softness');
+const yAxis = ref<AxisType>('traditional');
 
 // ズーム・パン関連の状態
 const containerRef = ref<HTMLElement>();
 const mapRef = ref<HTMLElement>();
-const zoomLevel = ref(1);
+const zoomLevel = ref(5);
 const panX = ref(0);
 const panY = ref(0);
 const isDragging = ref(false);
 const lastMouseX = ref(0);
 const lastMouseY = ref(0);
 const minZoom = 0.5;
-const maxZoom = 5;
+const maxZoom = 10;
+
+// マップを中央に配置する関数
+const centerMap = () => {
+  if (containerRef.value) {
+    const containerRect = containerRef.value.getBoundingClientRect();
+    const mapWidth = 1200 * zoomLevel.value;
+    const mapHeight = 1000 * zoomLevel.value;
+    
+    panX.value = (containerRect.width - mapWidth) / 2;
+    panY.value = (containerRect.height - mapHeight) / 2;
+  }
+};
 
 // 名前の読みに基づいてハッシュ値を生成してオフセットを決定
 const getReadingHash = (reading: string): number => {
@@ -183,13 +198,13 @@ const getReadingHash = (reading: string): number => {
 const positionedNames = computed(() => {
   const names = props.names.map(name => {
     // 基本位置を計算（マップサイズ: 1200x1000, マージン: 各側20px）
-    const baseX = name[xAxis.value] * 1160 + 20;
-    const baseY = name[yAxis.value] * 960 + 20;
+    const baseX = name[xAxis.value] * 1160 - 200;
+    const baseY = name[yAxis.value] * 960 - 200;
     
     // 読みに基づいてオフセットを生成
     const hash = getReadingHash(name.reading);
-    const offsetX = (hash % 40) - 20; // -20 ~ +19のオフセット
-    const offsetY = ((hash >> 8) % 40) - 20; // -20 ~ +19のオフセット
+    const offsetX = (hash % 120) - 60; // -60 ~ +59のオフセット
+    const offsetY = ((hash >> 8) % 120) - 60; // -60 ~ +59のオフセット
     
     return {
       ...name,
@@ -199,6 +214,41 @@ const positionedNames = computed(() => {
       adjustedY: Math.max(10, Math.min(980, baseY + offsetY))
     };
   });
+  
+  // 衝突回避処理
+  const minDistance = 25; // 最小距離
+  const repelForce = 15; // 反発力
+  const iterations = 3; // 反復回数
+  
+  for (let iter = 0; iter < iterations; iter++) {
+    for (let i = 0; i < names.length; i++) {
+      for (let j = i + 1; j < names.length; j++) {
+        const name1 = names[i];
+        const name2 = names[j];
+        
+        const dx = name2.adjustedX - name1.adjustedX;
+        const dy = name2.adjustedY - name1.adjustedY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < minDistance && distance > 0) {
+          // 正規化された方向ベクトル
+          const normalizedDx = dx / distance;
+          const normalizedDy = dy / distance;
+          
+          // 移動量計算
+          const moveDistance = (minDistance - distance) / 2;
+          const moveX = normalizedDx * moveDistance * repelForce / minDistance;
+          const moveY = normalizedDy * moveDistance * repelForce / minDistance;
+          
+          // 互いに逆方向に移動
+          name1.adjustedX = Math.max(10, Math.min(1180, name1.adjustedX - moveX));
+          name1.adjustedY = Math.max(10, Math.min(980, name1.adjustedY - moveY));
+          name2.adjustedX = Math.max(10, Math.min(1180, name2.adjustedX + moveX));
+          name2.adjustedY = Math.max(10, Math.min(980, name2.adjustedY + moveY));
+        }
+      }
+    }
+  }
   
   return names;
 });
@@ -219,8 +269,7 @@ const zoomOut = () => {
 // ビューをリセット
 const resetView = () => {
   zoomLevel.value = 1;
-  panX.value = 0;
-  panY.value = 0;
+  centerMap();
 };
 
 // マウスホイールでズーム
@@ -298,6 +347,7 @@ const selectName = (name: NameScore) => {
 onMounted(() => {
   document.addEventListener('mousemove', handleMouseMove);
   document.addEventListener('mouseup', handleMouseUp);
+  centerMap();
 });
 
 onUnmounted(() => {
