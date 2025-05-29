@@ -1,5 +1,60 @@
-# Vue 3 + TypeScript + Vite
+# 命名ツール (Naming Tool)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+キャラクターの名前を考える時に使うツールです。日本語の名前のデータベースを元に、様々な特性（男性らしさ・女性らしさ、柔らかさ、伝統性、珍しさ）を可視化し、理想的な名前を見つけることができます。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## ✨ 機能
+
+- **名前マップ**: 名前を2軸のマップ上に配置して視覚的に比較
+- **軸の切り替え**: 男性性/女性性、柔らかさ、伝統性、珍しさの組み合わせで表示
+- **インタラクティブ操作**: ズーム、パン、名前選択が可能
+- **詳細表示**: 選択した名前の詳細スコアと漢字候補を表示
+- **漢字連携**: 漢字から読み方を逆引きすることも可能
+
+
+## 📊 データについて
+
+約500の日本語の名前について、以下の5つの指標でスコア化しています：
+
+- **masculinity**: 男性らしさ (0.0 - 1.0)
+- **femininity**: 女性らしさ (0.0 - 1.0)  
+- **softness**: 柔らかさ (0.0 - 1.0)
+- **traditional**: 伝統性 (0.0 - 1.0)
+- **rarity**: 珍しさ (0.0 - 1.0)
+
+## 🚀 開発環境のセットアップ
+
+```bash
+# 依存関係のインストール
+pnpm install
+
+# 開発サーバーの起動
+pnpm dev
+
+# ビルド
+pnpm build
+
+# プレビュー
+pnpm preview
+```
+
+## 📝 使い方
+
+1. **軸の選択**: 左上のドロップダウンでX軸・Y軸を選択
+2. **マップ操作**: 
+   - マウスホイールでズーム
+   - ドラッグでパン（移動）
+   - 名前をクリックで選択
+3. **詳細確認**: 右パネルで選択した名前の詳細情報を確認
+4. **漢字候補**: 名前に使用可能な漢字を確認
+5. **逆引き**: 漢字から他の読み方を探索
+
+## 🎯 用途
+
+- **小説・漫画**: キャラクターの個性に合った名前選び
+- **ゲーム**: プレイヤーキャラクターやNPCの命名
+- **創作活動**: 作品世界観に適した名前の発見
+- **命名相談**: 赤ちゃんの名前やペットの名前検討
+
+## 📄 ライセンス
+
+MIT License
