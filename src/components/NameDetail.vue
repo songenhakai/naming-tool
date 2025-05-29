@@ -153,9 +153,6 @@ const selectReadingFromKanji = (reading: string) => {
 watch(() => props.selectedName, () => {
   selectedKanji.value = null;
 });
-
-// 全名前データの参照
-const allNames = computed(() => props.allNames);
 </script>
 
 <style scoped>

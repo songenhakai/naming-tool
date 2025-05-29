@@ -114,7 +114,7 @@
         
         <!-- データポイント -->
         <div 
-          v-for="(name, index) in positionedNames" 
+          v-for="name in positionedNames" 
           :key="name.reading"
           class="name-point"
           :style="{
