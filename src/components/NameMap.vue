@@ -1,51 +1,53 @@
 <template>
-  <div class="w-full h-full p-2 flex flex-col">
-    <div class="mb-3 flex gap-4 items-center flex-shrink-0">
-      <div>
-        <label class="block text-xs font-medium mb-1">X軸</label>
-        <select 
-          v-model="xAxis" 
-          class="border border-gray-300 rounded px-2 py-1 text-xs"
-        >
-          <option v-for="option in axisOptions" :key="option.value" :value="option.value">
-            {{ option.label }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-xs font-medium mb-1">Y軸</label>
-        <select 
-          v-model="yAxis" 
-          class="border border-gray-300 rounded px-2 py-1 text-xs"
-        >
-          <option v-for="option in axisOptions" :key="option.value" :value="option.value">
-            {{ option.label }}
-          </option>
-        </select>
+  <div class="name-map-container">
+    <div class="controls-section">
+      <div class="axis-controls">
+        <div class="axis-control">
+          <label class="axis-label">X軸</label>
+          <select 
+            v-model="xAxis" 
+            class="axis-select"
+          >
+            <option v-for="option in axisOptions" :key="option.value" :value="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+        <div class="axis-control">
+          <label class="axis-label">Y軸</label>
+          <select 
+            v-model="yAxis" 
+            class="axis-select"
+          >
+            <option v-for="option in axisOptions" :key="option.value" :value="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
       </div>
       
       <!-- ズーム・パンコントロール -->
-      <div class="ml-auto flex items-center gap-2">
-        <div class="text-xs text-gray-600">
+      <div class="zoom-controls">
+        <div class="zoom-display">
           ズーム: {{ (zoomLevel * 100).toFixed(0) }}%
         </div>
         <button 
           @click="zoomIn"
-          class="px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
+          class="zoom-button zoom-in"
           :disabled="zoomLevel >= maxZoom"
         >
           ＋
         </button>
         <button 
           @click="zoomOut"
-          class="px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
+          class="zoom-button zoom-out"
           :disabled="zoomLevel <= minZoom"
         >
           －
         </button>
         <button 
           @click="resetView"
-          class="px-2 py-1 bg-gray-500 text-white rounded text-xs hover:bg-gray-600"
+          class="reset-button"
         >
           リセット
         </button>
@@ -55,7 +57,7 @@
     <!-- スクロール可能なコンテナ -->
     <div 
       ref="containerRef"
-      class="overflow-hidden border border-gray-300 bg-white cursor-grab select-none flex-1"
+      class="map-container"
       @wheel="handleWheel"
       @mousedown="handleMouseDown"
       @mousemove="handleMouseMove"
@@ -64,7 +66,7 @@
     >
       <div 
         ref="mapRef"
-        class="relative origin-top-left"
+        class="map-content"
         :style="{
           width: '1200px',
           height: '1000px',
@@ -73,15 +75,15 @@
         }"
       >
         <!-- 軸ラベル -->
-        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-6 text-sm font-medium z-20">
+        <div class="axis-label-x">
           {{ axisOptions.find(opt => opt.value === xAxis)?.label }}
         </div>
-        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 -rotate-90 text-sm font-medium z-20">
+        <div class="axis-label-y">
           {{ axisOptions.find(opt => opt.value === yAxis)?.label }}
         </div>
         
         <!-- グリッド線 -->
-        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <svg class="grid-svg">
           <!-- 縦線 -->
           <line v-for="i in 11" :key="`v-${i}`" 
             :x1="i * 120" y1="0" 
@@ -94,7 +96,7 @@
             stroke="#e5e7eb" stroke-width="1" />
           
           <!-- 軸の数値ラベル -->
-          <g class="text-xs fill-gray-600">
+          <g class="grid-labels">
             <!-- X軸の数値 -->
             <text v-for="i in 11" :key="`x-label-${i}`"
               :x="i * 120" y="1020" 
@@ -114,7 +116,7 @@
         <div 
           v-for="(name, index) in positionedNames" 
           :key="name.reading"
-          class="absolute cursor-pointer transition-all duration-200 hover:scale-125 hover:z-30 hover:font-bold select-none"
+          class="name-point"
           :style="{
             left: name.adjustedX + 'px',
             bottom: name.adjustedY + 'px',
@@ -136,7 +138,7 @@
     </div>
     
     <!-- 操作説明 -->
-    <div class="mt-1 text-xs text-gray-500">
+    <div class="instructions">
       マウスホイール: ズーム | ドラッグ: パン | クリック: 名前選択
     </div>
   </div>
@@ -357,18 +359,207 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* カーソルの調整 */
-.cursor-grab:active {
+.name-map-container {
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.axis-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.axis-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.axis-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.axis-select {
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 0.75rem;
+  background: white;
+  color: #374151;
+  min-width: 100px;
+}
+
+.axis-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.zoom-display {
+  font-size: 0.75rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.zoom-button,
+.reset-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.zoom-button {
+  background-color: #2563eb;
+  color: white;
+  min-width: 32px;
+}
+
+.zoom-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.zoom-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #2563eb;
+}
+
+.reset-button {
+  background-color: #6b7280;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #4b5563;
+}
+
+.map-container {
+  flex: 1;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+
+.map-content {
+  position: relative;
+  transform-origin: top left;
+}
+
+.map-container:active {
   cursor: grabbing;
 }
 
-/* ボタンの無効化スタイル */
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.axis-label-x {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  z-index: 20;
+  pointer-events: none;
 }
 
-button:disabled:hover {
-  background-color: inherit;
+.axis-label-y {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-24px) rotate(-90deg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.grid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.grid-labels {
+  font-size: 0.75rem;
+  fill: #6b7280;
+}
+
+.name-point {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.name-point:hover {
+  transform: scale(1.25);
+  z-index: 30 !important;
+  font-weight: bold !important;
+}
+
+.instructions {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .axis-controls {
+    justify-content: center;
+  }
+  
+  .zoom-controls {
+    justify-content: center;
+  }
+  
+  .axis-select {
+    min-width: 80px;
+  }
 }
 </style> 

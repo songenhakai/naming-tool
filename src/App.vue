@@ -28,49 +28,123 @@ const handleUpdateFilter = (names: NameScore[]) => {
 </script>
 
 <template>
-  <div class="h-screen bg-gray-100 flex flex-col overflow-y-hidden">
-    <!-- さらにコンパクトなヘッダ -->
-    <header class="bg-white shadow-sm border-b flex-shrink-0">
-      <div class="px-3 py-1 h-full flex flex-col justify-center">
-        <h1 class="text-lg font-bold text-gray-900 leading-tight">日本人名前検索ツール</h1>
+  <div class="app-grid">
+    <!-- ヘッダ -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-title">日本人名前検索ツール</h1>
       </div>
     </header>
     
-    <!-- メインコンテンツ - 残りの高さを使用 -->
-    <main class="flex flex-1 min-h-0 overflow-y-hidden" >
-      <!-- 左側: 2Dマップ - 幅を大幅に拡大 -->
-      <div class="w-3/4 bg-white border-r flex-shrink-0 h-full">
-        <NameMap 
-          :names="filteredNames" 
+    <!-- メインマップエリア -->
+    <main class="main-area">
+      <NameMap 
+        :names="filteredNames" 
+        :selected-name="selectedName"
+        @select-name="handleSelectName"
+      />
+    </main>
+    
+    <!-- サイドパネル -->
+    <aside class="sidebar">
+      <div v-if="!selectedName" class="sidebar-content">
+        <NameList 
+          :names="allNames"
           :selected-name="selectedName"
+          @select-name="handleSelectName"
+          @update-filter="handleUpdateFilter"
+        />
+      </div>
+      <div v-else class="sidebar-content">
+        <NameDetail 
+          :selected-name="selectedName"
+          :all-names="allNames"
           @select-name="handleSelectName"
         />
       </div>
-      
-      <!-- 右側: 名前一覧 or 詳細 - 幅を狭く -->
-      <div class="w-1/4 bg-white flex-shrink-0 min-w-0 h-full overflow-hidden">
-        <div v-if="!selectedName" class="h-full">
-          <NameList 
-            :names="allNames"
-            :selected-name="selectedName"
-            @select-name="handleSelectName"
-            @update-filter="handleUpdateFilter"
-          />
-        </div>
-        <div v-else class="h-full">
-          <NameDetail 
-            :selected-name="selectedName"
-            :all-names="allNames"
-            @select-name="handleSelectName"
-          />
-        </div>
-      </div>
-    </main>
+    </aside>
   </div>
 </template>
 
 <style>
 #app {
   font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "main sidebar";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 1fr;
+  height: 100vh;
+  background-color: #f3f4f6;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-area: header;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.header-content {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.main-area {
+  grid-area: main;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  min-height: 0;
+  min-width: 300px;
+}
+
+.sidebar-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-areas: 
+      "header"
+      "main"
+      "sidebar";
+    grid-template-rows: auto 2fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    min-width: unset;
+  }
 }
 </style>
