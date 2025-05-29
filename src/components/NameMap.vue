@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full h-full p-4">
-    <div class="mb-4 flex gap-4 items-center">
+  <div class="w-full h-full p-2 flex flex-col">
+    <div class="mb-3 flex gap-4 items-center flex-shrink-0">
       <div>
-        <label class="block text-sm font-medium mb-2">X軸</label>
+        <label class="block text-xs font-medium mb-1">X軸</label>
         <select 
           v-model="xAxis" 
-          class="border border-gray-300 rounded px-3 py-1 text-sm"
+          class="border border-gray-300 rounded px-2 py-1 text-xs"
         >
           <option v-for="option in axisOptions" :key="option.value" :value="option.value">
             {{ option.label }}
@@ -13,10 +13,10 @@
         </select>
       </div>
       <div>
-        <label class="block text-sm font-medium mb-2">Y軸</label>
+        <label class="block text-xs font-medium mb-1">Y軸</label>
         <select 
           v-model="yAxis" 
-          class="border border-gray-300 rounded px-3 py-1 text-sm"
+          class="border border-gray-300 rounded px-2 py-1 text-xs"
         >
           <option v-for="option in axisOptions" :key="option.value" :value="option.value">
             {{ option.label }}
@@ -26,26 +26,26 @@
       
       <!-- ズーム・パンコントロール -->
       <div class="ml-auto flex items-center gap-2">
-        <div class="text-sm text-gray-600">
+        <div class="text-xs text-gray-600">
           ズーム: {{ (zoomLevel * 100).toFixed(0) }}%
         </div>
         <button 
           @click="zoomIn"
-          class="px-2 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600"
+          class="px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
           :disabled="zoomLevel >= maxZoom"
         >
           ＋
         </button>
         <button 
           @click="zoomOut"
-          class="px-2 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600"
+          class="px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600"
           :disabled="zoomLevel <= minZoom"
         >
           －
         </button>
         <button 
           @click="resetView"
-          class="px-3 py-1 bg-gray-500 text-white rounded text-sm hover:bg-gray-600"
+          class="px-2 py-1 bg-gray-500 text-white rounded text-xs hover:bg-gray-600"
         >
           リセット
         </button>
@@ -55,8 +55,7 @@
     <!-- スクロール可能なコンテナ -->
     <div 
       ref="containerRef"
-      class="overflow-hidden border border-gray-300 bg-white cursor-grab select-none"
-      style="width: 100%; height: 600px;"
+      class="overflow-hidden border border-gray-300 bg-white cursor-grab select-none flex-1"
       @wheel="handleWheel"
       @mousedown="handleMouseDown"
       @mousemove="handleMouseMove"
@@ -134,7 +133,7 @@
     </div>
     
     <!-- 操作説明 -->
-    <div class="mt-2 text-xs text-gray-500">
+    <div class="mt-1 text-xs text-gray-500">
       マウスホイール: ズーム | ドラッグ: パン | クリック: 名前選択
     </div>
   </div>

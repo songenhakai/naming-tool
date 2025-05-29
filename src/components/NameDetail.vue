@@ -1,39 +1,39 @@
 <template>
-  <div class="w-full h-full p-4">
+  <div class="w-full h-full p-2 flex flex-col overflow-hidden">
     <div v-if="!selectedName && !selectedKanji" class="text-center text-gray-500 mt-8">
       名前を選択してください
     </div>
     
     <!-- 読み方詳細 -->
-    <div v-else-if="selectedName && !selectedKanji">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-bold">{{ selectedName.reading }}</h2>
+    <div v-else-if="selectedName && !selectedKanji" class="flex flex-col h-full overflow-hidden">
+      <div class="flex justify-between items-center mb-3 flex-shrink-0">
+        <h2 class="text-xl font-bold">{{ selectedName.reading }}</h2>
         <button 
           @click="clearSelection"
-          class="text-gray-500 hover:text-gray-700 text-sm"
+          class="text-gray-500 hover:text-gray-700 text-xs"
         >
-          ✕ 選択解除
+          ✕ 解除
         </button>
       </div>
       
       <!-- スコア表示 -->
-      <div class="mb-6 p-4 border border-gray-200 rounded bg-gray-50">
-        <h3 class="text-lg font-medium mb-3">スコア</h3>
-        <div class="grid grid-cols-2 gap-3">
+      <div class="mb-4 p-3 border border-gray-200 rounded bg-gray-50 flex-shrink-0">
+        <h3 class="text-sm font-medium mb-2">スコア</h3>
+        <div class="grid grid-cols-1 gap-1 text-xs">
           <div class="flex justify-between">
-            <span>男性らしさ:</span>
+            <span>男性:</span>
             <span class="font-medium">{{ selectedName.masculinity.toFixed(2) }}</span>
           </div>
           <div class="flex justify-between">
-            <span>女性らしさ:</span>
+            <span>女性:</span>
             <span class="font-medium">{{ selectedName.femininity.toFixed(2) }}</span>
           </div>
           <div class="flex justify-between">
-            <span>柔らかさ:</span>
+            <span>柔らか:</span>
             <span class="font-medium">{{ selectedName.softness.toFixed(2) }}</span>
           </div>
           <div class="flex justify-between">
-            <span>伝統性:</span>
+            <span>伝統:</span>
             <span class="font-medium">{{ selectedName.traditional.toFixed(2) }}</span>
           </div>
           <div class="flex justify-between">
@@ -44,17 +44,17 @@
       </div>
       
       <!-- 漢字候補 -->
-      <div class="mb-6">
-        <h3 class="text-lg font-medium mb-3">漢字候補</h3>
-        <div v-if="kanjiCandidates.length === 0" class="text-gray-500">
+      <div class="flex-1 overflow-hidden flex flex-col">
+        <h3 class="text-sm font-medium mb-2 flex-shrink-0">漢字候補</h3>
+        <div v-if="kanjiCandidates.length === 0" class="text-gray-500 text-xs">
           漢字候補がありません
         </div>
-        <div v-else class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
+        <div v-else class="grid grid-cols-2 gap-1 overflow-y-auto">
           <button
             v-for="kanji in kanjiCandidates"
             :key="kanji"
             @click="selectKanji(kanji)"
-            class="p-3 border border-gray-300 rounded hover:bg-blue-50 hover:border-blue-300 transition-colors text-center font-medium"
+            class="p-2 border border-gray-300 rounded hover:bg-blue-50 hover:border-blue-300 transition-colors text-center font-medium text-sm"
           >
             {{ kanji }}
           </button>
@@ -63,29 +63,29 @@
     </div>
     
     <!-- 漢字詳細 -->
-    <div v-else-if="selectedKanji">
-      <div class="mb-4">
+    <div v-else-if="selectedKanji" class="flex flex-col h-full overflow-hidden">
+      <div class="mb-3 flex-shrink-0">
         <button 
           @click="goBackToReading"
-          class="text-blue-600 hover:text-blue-800 text-sm"
+          class="text-blue-600 hover:text-blue-800 text-xs"
         >
           ← {{ selectedName?.reading }}に戻る
         </button>
       </div>
       
-      <h2 class="text-2xl font-bold mb-4">{{ selectedKanji }}</h2>
+      <h2 class="text-xl font-bold mb-3 flex-shrink-0">{{ selectedKanji }}</h2>
       
       <!-- 読み方候補 -->
-      <div class="mb-6">
-        <h3 class="text-lg font-medium mb-3">読み方候補</h3>
-        <div v-if="kanjiReadings.length === 0" class="text-gray-500">
+      <div class="flex-1 overflow-hidden flex flex-col">
+        <h3 class="text-sm font-medium mb-2 flex-shrink-0">読み方候補</h3>
+        <div v-if="kanjiReadings.length === 0" class="text-gray-500 text-xs">
           読み方候補がありません
         </div>
-        <div v-else class="flex flex-wrap gap-2">
+        <div v-else class="flex flex-wrap gap-1 overflow-y-auto">
           <span
             v-for="reading in kanjiReadings"
             :key="reading"
-            class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm cursor-pointer hover:bg-blue-200 transition-colors"
+            class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs cursor-pointer hover:bg-blue-200 transition-colors"
             @click="selectReadingFromKanji(reading)"
           >
             {{ reading }}
