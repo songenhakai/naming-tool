@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full p-2 flex flex-col">
-    <h2 class="text-base font-bold mb-3">名前一覧</h2>
+    <h2 class="text-base font-bold mb-3 flex-shrink-0">名前一覧</h2>
     
     <!-- 検索フィルタ -->
     <div class="mb-3 flex-shrink-0">
@@ -13,11 +13,11 @@
     </div>
     
     <!-- 名前一覧 -->
-    <div class="border border-gray-300 rounded flex-1 overflow-hidden flex flex-col">
+    <div class="border border-gray-300 rounded flex-1 overflow-hidden flex flex-col min-h-0">
       <div class="text-xs text-gray-600 p-2 border-b bg-gray-50 flex-shrink-0">
         {{ filteredNames.length }} 件
       </div>
-      <div class="flex-1 overflow-y-auto">
+      <div class="flex-1 overflow-y-auto min-h-0">
         <div 
           v-for="name in filteredNames" 
           :key="name.reading"

@@ -28,17 +28,16 @@ const handleUpdateFilter = (names: NameScore[]) => {
 </script>
 
 <template>
-  <div class="h-screen bg-gray-100 flex flex-col">
+  <div class="h-screen bg-gray-100 flex flex-col overflow-y-hidden">
     <!-- さらにコンパクトなヘッダ -->
-    <header class="bg-white shadow-sm border-b flex-shrink-0" style="height: 50px;">
+    <header class="bg-white shadow-sm border-b flex-shrink-0">
       <div class="px-3 py-1 h-full flex flex-col justify-center">
         <h1 class="text-lg font-bold text-gray-900 leading-tight">日本人名前検索ツール</h1>
-        <p class="text-xs text-gray-600 leading-tight">現代的な日本人の名前を探索・分析</p>
       </div>
     </header>
     
     <!-- メインコンテンツ - 残りの高さを使用 -->
-    <main class="flex flex-1 min-h-0" style="height: calc(100vh - 50px);">
+    <main class="flex flex-1 min-h-0 overflow-y-hidden" >
       <!-- 左側: 2Dマップ - 幅を大幅に拡大 -->
       <div class="w-3/4 bg-white border-r flex-shrink-0 h-full">
         <NameMap 
