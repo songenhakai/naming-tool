@@ -59,6 +59,7 @@ const handleUpdateFilter = (names: NameScore[]) => {
         <div v-else>
           <NameDetail 
             :selected-name="selectedName"
+            :all-names="allNames"
             @select-name="handleSelectName"
           />
         </div>

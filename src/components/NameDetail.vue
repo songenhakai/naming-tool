@@ -103,6 +103,7 @@ import { getKanjiByReading, getReadingsByKanji } from '../utils/nameData';
 
 const props = defineProps<{
   selectedName: NameScore | null;
+  allNames: NameScore[];
 }>();
 
 const emit = defineEmits<{
@@ -134,16 +135,23 @@ const clearSelection = () => {
 };
 
 const selectReadingFromKanji = (reading: string) => {
-  // 親に読み方選択を通知（nullで選択解除、実際の実装では名前オブジェクトを渡す）
-  console.log('Selected reading from kanji:', reading);
-  // 簡略化のため、選択を解除して一覧に戻る
-  clearSelection();
+  // 読み方に対応するNameScoreを検索
+  const targetName = props.allNames.find(name => name.reading === reading);
+  if (targetName) {
+    selectedKanji.value = null; // 漢字選択をリセット
+    emit('selectName', targetName); // その読み方の詳細に遷移
+  } else {
+    console.warn('Reading not found in names list:', reading);
+  }
 };
 
 // selectedNameが変更されたときにselectedKanjiをリセット
 watch(() => props.selectedName, () => {
   selectedKanji.value = null;
 });
+
+// 全名前データの参照
+const allNames = computed(() => props.allNames);
 </script>
 
 <style scoped>
