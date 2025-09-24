@@ -32,7 +32,7 @@ const handleUpdateFilter = (names: NameScore[]) => {
     <!-- ヘッダ -->
     <header class="header">
       <div class="header-content">
-        <h1 class="header-title">ひまりヘルパー（キャラクター命名ツール）</h1>
+        <h1 class="header-title">キャラクター命名支援ツール</h1>
       </div>
     </header>
     
