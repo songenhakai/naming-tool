@@ -82,7 +82,7 @@
             <div class="name-reading">{{ name.reading }}</div>
             <div class="name-tags">
               <span class="tag rarity-tag" :class="'rarity-' + getRarityLevel(name.rarity)">
-                v{{ getRarityLevel(name.rarity) }}
+                Lv{{ getRarityLevel(name.rarity) }}
               </span>
               <span v-if="name.masculinity > 0.6" class="tag gender-tag boys">男</span>
               <span v-else-if="name.femininity > 0.6" class="tag gender-tag girls">女</span>
@@ -120,11 +120,11 @@ const filters = ref({
 });
 
 const rarityLevels = [
-  { value: 1, label: 'v1 (普通)' },
-  { value: 2, label: 'v2' },
-  { value: 3, label: 'v3' },
-  { value: 4, label: 'v4' },
-  { value: 5, label: 'v5 (珍しい)' }
+  { value: 1, label: 'Lv1 (普通)' },
+  { value: 2, label: 'Lv2' },
+  { value: 3, label: 'Lv3' },
+  { value: 4, label: 'Lv4' },
+  { value: 5, label: 'Lv5 (珍しい)' }
 ];
 
 const getRarityLevel = (rarity: number): number => {
