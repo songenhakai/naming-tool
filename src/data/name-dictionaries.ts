@@ -1,5 +1,5 @@
 // 自動生成された名前辞書
-// 生成日時: 2026/3/17 18:17:48
+// 生成日時: 2026/3/17 20:17:53
 
 // 漢字から読み方を検索する辞書
 export const KANJI_TO_READING: Record<string, string[]> = {
@@ -78,14 +78,10 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "いちか",
     "いっか"
   ],
-  "一実": [
-    "いちみ"
-  ],
   "一彩": [
     "いっさ"
   ],
   "一心": [
-    "いちみ",
     "いっしん",
     "かずひと",
     "かずみ",
@@ -93,9 +89,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "一新": [
     "いっしん"
-  ],
-  "一未": [
-    "いちみ"
   ],
   "一果": [
     "いちか",
@@ -109,12 +102,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "いちか",
     "いっか",
     "かずか"
-  ],
-  "一海": [
-    "いちみ"
-  ],
-  "一深": [
-    "いちみ"
   ],
   "一澄": [
     "かずみ"
@@ -137,9 +124,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "一紗": [
     "いっさ"
-  ],
-  "一美": [
-    "いちみ"
   ],
   "一翔": [
     "ひとか"
@@ -198,9 +182,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "七菜": [
     "なな"
   ],
-  "七葵": [
-    "なあ"
-  ],
   "万央": [
     "まおう"
   ],
@@ -247,9 +228,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "丞": [
     "じょう"
   ],
-  "中": [
-    "ちゅう"
-  ],
   "乃亜": [
     "のあ"
   ],
@@ -266,8 +244,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "のん"
   ],
   "乃碧": [
-    "のあ",
-    "のあお"
+    "のあ"
   ],
   "乃空": [
     "のあ"
@@ -275,20 +252,11 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "乃菜": [
     "のな"
   ],
-  "乃葵": [
-    "のあお"
-  ],
-  "乃蒼": [
-    "のあお"
-  ],
   "乃藍": [
     "のあい"
   ],
   "乃逢": [
     "のあい"
-  ],
-  "乃青": [
-    "のあお"
   ],
   "久": [
     "ひさし"
@@ -493,9 +461,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "以満": [
     "いま"
-  ],
-  "仲": [
-    "ちゅう"
   ],
   "伊代里": [
     "いより"
@@ -725,9 +690,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "侑里": [
     "じゅり"
   ],
-  "依真": [
-    "よりま"
-  ],
   "依紗": [
     "よりさ"
   ],
@@ -738,8 +700,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "いま",
     "いより",
     "えま",
-    "えみ",
-    "よりま"
+    "えみ"
   ],
   "依采": [
     "いさ",
@@ -747,9 +708,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "えり",
     "えりさ",
     "よりさ"
-  ],
-  "依麻": [
-    "よりま"
   ],
   "俊": [
     "しゅん"
@@ -912,9 +870,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "優衣子": [
     "ゆいこ"
   ],
-  "優衣月": [
-    "ゆいつき"
-  ],
   "優衣菜": [
     "ゆいな"
   ],
@@ -940,9 +895,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "元": [
     "げん",
     "はじめ"
-  ],
-  "元葉": [
-    "げんは"
   ],
   "充": [
     "あつし",
@@ -1015,7 +967,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "光莉": [
     "あかり",
-    "こうり",
     "ひかり",
     "ひより",
     "みかり"
@@ -1247,7 +1198,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "なぎと"
   ],
   "凪葵": [
-    "なあ",
     "なお",
     "なぎ",
     "なぎき"
@@ -1269,21 +1219,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "凰": [
     "おう"
-  ],
-  "凰人": [
-    "おうと"
-  ],
-  "凰徒": [
-    "おうと"
-  ],
-  "凰斗": [
-    "おうと"
-  ],
-  "凰杜": [
-    "おうと"
-  ],
-  "凰翔": [
-    "おうと"
   ],
   "初": [
     "はじめ"
@@ -1351,14 +1286,8 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "創磨": [
     "そうま"
   ],
-  "創緒": [
-    "そうお"
-  ],
   "創翔": [
     "そうしょう"
-  ],
-  "創衣": [
-    "そうい"
   ],
   "力": [
     "りき"
@@ -1580,9 +1509,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "南湖": [
     "なご"
   ],
-  "南空": [
-    "なあ"
-  ],
   "南都": [
     "みなと"
   ],
@@ -1634,9 +1560,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "友晴": [
     "ゆうは"
-  ],
-  "友真": [
-    "ともま"
   ],
   "友紀": [
     "ゆき"
@@ -1715,9 +1638,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "名奈": [
     "なな"
-  ],
-  "名彩": [
-    "なあ"
   ],
   "名護": [
     "なご"
@@ -1878,9 +1798,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "咲空": [
     "おう"
   ],
-  "咲空都": [
-    "さくらと"
-  ],
   "咲良": [
     "えみ",
     "おう",
@@ -1889,9 +1806,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "さき",
     "さくら",
     "さら"
-  ],
-  "咲良都": [
-    "さくらと"
   ],
   "咲茉": [
     "えま",
@@ -1952,9 +1866,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "唯衣": [
     "ゆい"
   ],
-  "唯衣月": [
-    "ゆいつき"
-  ],
   "唯衣華": [
     "ゆいか"
   ],
@@ -2014,9 +1925,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "壮昌": [
     "そうしょう"
   ],
-  "壮緒": [
-    "そうお"
-  ],
   "壮翔": [
     "そうしょう",
     "そうと"
@@ -2055,9 +1963,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "夕羽": [
     "ゆは"
-  ],
-  "夕衣月": [
-    "ゆいつき"
   ],
   "夕陽": [
     "ゆうひ"
@@ -2213,9 +2118,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "奈乃": [
     "なの"
   ],
-  "奈亜": [
-    "なあ"
-  ],
   "奈南": [
     "なな",
     "ななせ"
@@ -2253,9 +2155,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "かなと",
     "そうじん",
     "そうと"
-  ],
-  "奏伊": [
-    "そうい"
   ],
   "奏多": [
     "かなた",
@@ -2297,8 +2196,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "かなと"
   ],
   "奏音": [
-    "かのん",
-    "そうね"
+    "かのん"
   ],
   "奏馬": [
     "そうま"
@@ -2463,9 +2361,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "宗心": [
     "そうしん"
   ],
-  "宗桜": [
-    "そうお"
-  ],
   "宗生": [
     "そうせい"
   ],
@@ -2482,8 +2377,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "そうと"
   ],
   "宙": [
-    "そら",
-    "ちゅう"
+    "そら"
   ],
   "実": [
     "まこと",
@@ -2504,9 +2398,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "実和": [
     "みわ"
-  ],
-  "実咲": [
-    "みさく"
   ],
   "実央": [
     "みお",
@@ -2536,7 +2427,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みお",
     "みおう",
     "みさ",
-    "みさく",
     "みさくら"
   ],
   "実由希": [
@@ -2691,9 +2581,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "小那": [
     "さな"
   ],
-  "小里": [
-    "こうり"
-  ],
   "小陽": [
     "こはる"
   ],
@@ -2760,14 +2647,8 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "幸希": [
     "ゆき"
   ],
-  "幸理": [
-    "こうり"
-  ],
   "幸輝": [
     "こうき"
-  ],
-  "幻葉": [
-    "げんは"
   ],
   "広": [
     "ひろ"
@@ -2854,9 +2735,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "弦": [
     "げん",
     "つる"
-  ],
-  "弦葉": [
-    "げんは"
   ],
   "弦陽": [
     "げんよう"
@@ -3163,8 +3041,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "しずく"
   ],
   "忠": [
-    "ただ",
-    "ちゅう"
+    "ただ"
   ],
   "快": [
     "かい",
@@ -3383,9 +3260,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "悠衣": [
     "ゆいし"
   ],
-  "悠衣月": [
-    "ゆいつき"
-  ],
   "悠那": [
     "はるな"
   ],
@@ -3424,9 +3298,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "想真": [
     "そうま"
-  ],
-  "想音": [
-    "そうね"
   ],
   "愛": [
     "あい",
@@ -3547,9 +3418,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "扇隼": [
     "せんじゅん"
   ],
-  "抽": [
-    "ちゅう"
-  ],
   "拓": [
     "たく"
   ],
@@ -3652,9 +3520,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "斗真": [
     "としま"
-  ],
-  "斗磨": [
-    "ともま"
   ],
   "新": [
     "あらた",
@@ -4288,9 +4153,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "有翔": [
     "ゆうしょう"
   ],
-  "朋麻": [
-    "ともま"
-  ],
   "朔": [
     "いさむ",
     "さく",
@@ -4301,9 +4163,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "朔羅": [
     "さくら"
-  ],
-  "朔羅都": [
-    "さくらと"
   ],
   "朔良": [
     "おう",
@@ -4325,12 +4184,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あき",
     "あさひ",
     "あすか"
-  ],
-  "朝馬": [
-    "ともま"
-  ],
-  "未咲": [
-    "みさく"
   ],
   "未央": [
     "みお",
@@ -4615,9 +4468,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "さくら",
     "はる"
   ],
-  "桜楽都": [
-    "さくらと"
-  ],
   "桜羅": [
     "さら"
   ],
@@ -4628,8 +4478,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "さくら"
   ],
   "桜都": [
-    "おうと",
-    "さくらと",
     "さと"
   ],
   "梓": [
@@ -4733,18 +4581,11 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "楓臣": [
     "ふうしん"
   ],
-  "楓花": [
-    "ふうはな"
-  ],
   "楓菜": [
     "かえで"
   ],
   "楓華": [
-    "ふうか",
-    "ふうはな"
-  ],
-  "楓葉": [
-    "ふうはな"
+    "ふうか"
   ],
   "楓音": [
     "かえで",
@@ -5370,8 +5211,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みなと"
   ],
   "湊音": [
-    "そうお",
-    "そうね",
     "みお",
     "みなと",
     "みなね"
@@ -5403,7 +5242,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "げん"
   ],
   "源葉": [
-    "げんは",
     "げんよう"
   ],
   "源陽": [
@@ -5505,8 +5343,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あかり",
     "あきま",
     "とうしん",
-    "とうま",
-    "ともま"
+    "とうま"
   ],
   "燐": [
     "りん"
@@ -5524,14 +5361,8 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "爽世": [
     "そよ"
   ],
-  "爽唯": [
-    "そうい"
-  ],
   "爽彰": [
     "そうしょう"
-  ],
-  "爽音": [
-    "そうね"
   ],
   "猛": [
     "いさむ",
@@ -5546,9 +5377,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "玄": [
     "げん"
-  ],
-  "玄葉": [
-    "げんは"
   ],
   "玄陽": [
     "げんよう"
@@ -5956,9 +5784,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "由衣子": [
     "ゆいこ"
   ],
-  "由衣月": [
-    "ゆいつき"
-  ],
   "由衣菜": [
     "ゆいな"
   ],
@@ -6090,9 +5915,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "知佳": [
     "ちか"
   ],
-  "知茉": [
-    "ともま"
-  ],
   "碧": [
     "あお",
     "あおい",
@@ -6104,24 +5926,16 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "碧人": [
     "あおと",
-    "あおひと",
     "せいと"
-  ],
-  "碧仁": [
-    "あおひと"
   ],
   "碧太": [
     "あおた"
   ],
   "碧斗": [
     "あおと",
-    "あおひと",
     "あきと",
     "せいと",
     "はると"
-  ],
-  "碧新": [
-    "あおしん"
   ],
   "碧汰": [
     "あおた"
@@ -6133,7 +5947,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あおぞら"
   ],
   "碧空": [
-    "あおく",
     "あおぞら"
   ],
   "碧翔": [
@@ -6372,9 +6185,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "紀良": [
     "きら"
   ],
-  "紅梨": [
-    "こうり"
-  ],
   "純": [
     "すみ",
     "すみれ"
@@ -6439,9 +6249,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "紗紅": [
     "おう",
     "さくら"
-  ],
-  "紗紅都": [
-    "さくらと"
   ],
   "紗羅": [
     "しゃら"
@@ -6509,7 +6316,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "しず"
   ],
   "紬": [
-    "ちゅう",
     "つむぎ",
     "つむぐ",
     "ゆい",
@@ -6558,7 +6364,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "絃葉": [
     "いとは",
     "かずは",
-    "げんは",
     "げんよう",
     "ゆずは"
   ],
@@ -6633,7 +6438,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "結月": [
     "ゆい",
-    "ゆいつき",
     "ゆづき"
   ],
   "結望": [
@@ -6888,9 +6692,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "美佑": [
     "みゆう"
   ],
-  "美作": [
-    "みさく"
-  ],
   "美佳理": [
     "みかり"
   ],
@@ -6915,7 +6716,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "美咲": [
     "みさ",
-    "みさく",
     "みずき"
   ],
   "美咲来": [
@@ -6931,7 +6731,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みゆ"
   ],
   "美央": [
-    "びお",
     "みおう"
   ],
   "美奈": [
@@ -6979,7 +6778,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みと"
   ],
   "美旺": [
-    "びお",
     "みおう"
   ],
   "美春": [
@@ -7005,9 +6803,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "美月紀": [
     "みずき"
   ],
-  "美朔": [
-    "みさく"
-  ],
   "美未": [
     "みみ"
   ],
@@ -7018,7 +6813,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みゆ"
   ],
   "美桜": [
-    "びお",
     "みお",
     "みおう",
     "みさくら"
@@ -7056,9 +6850,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "美瑚": [
     "みこ"
   ],
-  "美生": [
-    "びお"
-  ],
   "美由": [
     "みゆ",
     "みゆう"
@@ -7084,7 +6875,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "みゆき"
   ],
   "美緒": [
-    "びお",
     "みお"
   ],
   "美美": [
@@ -7197,8 +6987,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "かける",
     "しょう",
     "しょうた",
-    "しょうへい",
-    "とぶ"
+    "しょうへい"
   ],
   "翔人": [
     "かいと",
@@ -7250,14 +7039,8 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "としま",
     "はるま"
   ],
-  "翔舞": [
-    "とぶ"
-  ],
   "翔雅": [
     "かける"
-  ],
-  "翔飛": [
-    "とぶ"
   ],
   "翔馬": [
     "かける",
@@ -7452,9 +7235,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "はなね",
     "はなの"
   ],
-  "花風": [
-    "かざはな"
-  ],
   "芽": [
     "めぐみ"
   ],
@@ -7617,9 +7397,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "茉莉": [
     "まり"
   ],
-  "荘維": [
-    "そうい"
-  ],
   "莉央": [
     "りお",
     "りおう",
@@ -7662,9 +7439,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "菜奈": [
     "なな"
   ],
-  "菜愛": [
-    "なあ"
-  ],
   "菜緒": [
     "なお"
   ],
@@ -7703,9 +7477,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "華音": [
     "はなね"
-  ],
-  "華風": [
-    "かざはな"
   ],
   "萌": [
     "めぐみ"
@@ -7769,11 +7540,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "めぐみ"
   ],
   "葵人": [
-    "あおと",
-    "あおひと"
-  ],
-  "葵信": [
-    "あおしん"
+    "あおと"
   ],
   "葵多": [
     "あおた"
@@ -7799,17 +7566,12 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "そう",
     "そら"
   ],
-  "蒼久": [
-    "あおく"
-  ],
   "蒼人": [
-    "あおと",
-    "あおひと"
+    "あおと"
   ],
   "蒼依": [
     "あい",
-    "あおい",
-    "そうい"
+    "あおい"
   ],
   "蒼夜": [
     "そよ"
@@ -7826,14 +7588,10 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "そうた",
     "そうや"
   ],
-  "蒼央": [
-    "そうお"
-  ],
   "蒼弥": [
     "そうや"
   ],
   "蒼心": [
-    "あおしん",
     "そうしん"
   ],
   "蒼斗": [
@@ -7847,9 +7605,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あおた",
     "そうた"
   ],
-  "蒼玖": [
-    "あおく"
-  ],
   "蒼生": [
     "あお",
     "あおい",
@@ -7857,7 +7612,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "そうせい"
   ],
   "蒼真": [
-    "あおしん",
     "あおま",
     "そうしん",
     "そうじん",
@@ -7866,15 +7620,11 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "蒼矢": [
     "そうや"
   ],
-  "蒼矩": [
-    "あおく"
-  ],
   "蒼穹": [
     "あおぞら"
   ],
   "蒼空": [
     "あお",
-    "あおく",
     "あおぞら",
     "そら"
   ],
@@ -7886,9 +7636,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "蒼都": [
     "あおと",
     "そうと"
-  ],
-  "蒼音": [
-    "そうね"
   ],
   "蒼馬": [
     "あおま"
@@ -7917,9 +7664,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "藍唯": [
     "あい"
   ],
-  "藍臣": [
-    "あおしん"
-  ],
   "藍茉": [
     "あいま"
   ],
@@ -7947,9 +7691,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "虹春": [
     "こはる"
-  ],
-  "虹李": [
-    "こうり"
   ],
   "蜜": [
     "みつ"
@@ -8127,9 +7868,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "賀来": [
     "がく"
-  ],
-  "跳": [
-    "とぶ"
   ],
   "輔": [
     "すけ",
@@ -8534,32 +8272,16 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "陸人": [
     "りくと"
   ],
-  "陸将": [
-    "りくしょう"
-  ],
   "陸希": [
     "りき"
   ],
-  "陸承": [
-    "りくしょう"
-  ],
   "陸斗": [
     "りくと"
-  ],
-  "陸昇": [
-    "りくしょう"
-  ],
-  "陸昌": [
-    "りくしょう"
-  ],
-  "陸正": [
-    "りくしょう"
   ],
   "陸空": [
     "りくと"
   ],
   "陸翔": [
-    "りくしょう",
     "りくと"
   ],
   "陽": [
@@ -8892,17 +8614,13 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あおい"
   ],
   "青人": [
-    "あおと",
-    "あおひと"
+    "あおと"
   ],
   "青依": [
     "あおい"
   ],
   "青宙": [
     "あおぞら"
-  ],
-  "青心": [
-    "あおしん"
   ],
   "青斗": [
     "せいと"
@@ -8911,7 +8629,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あおた"
   ],
   "青空": [
-    "あおく",
     "あおぞら"
   ],
   "青翔": [
@@ -8994,15 +8711,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "頼沙": [
     "よりさ"
   ],
-  "頼真": [
-    "よりま"
-  ],
-  "頼茉": [
-    "よりま"
-  ],
-  "頼麻": [
-    "よりま"
-  ],
   "額": [
     "がく"
   ],
@@ -9043,7 +8751,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "ふうま"
   ],
   "風羽": [
-    "かざはな",
     "ふう"
   ],
   "風翔": [
@@ -9053,21 +8760,11 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "ふうしん"
   ],
   "風花": [
-    "かざはな",
     "ふうか",
-    "ふうはな",
     "ふか"
   ],
-  "風英": [
-    "かざはな"
-  ],
   "風華": [
-    "かざはな",
-    "ふうか",
-    "ふうはな"
-  ],
-  "風葉": [
-    "ふうはな"
+    "ふうか"
   ],
   "風香": [
     "ふうか"
@@ -9108,23 +8805,13 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "はやと",
     "ふうた"
   ],
-  "颯生": [
-    "そうお"
-  ],
   "颯真": [
     "そうしん",
     "そうま",
     "はやと"
   ],
-  "颯衣": [
-    "そうい"
-  ],
   "颯音": [
-    "そうね",
     "はやね"
-  ],
-  "飛": [
-    "とぶ"
   ],
   "飛依": [
     "ひより"
@@ -9169,8 +8856,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "かな"
   ],
   "香里": [
-    "かおり",
-    "こうり"
+    "かおり"
   ],
   "香音": [
     "かおん",
@@ -9754,14 +9440,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "一紗",
     "一颯"
   ],
-  "いちみ": [
-    "一実",
-    "一心",
-    "一未",
-    "一海",
-    "一深",
-    "一美"
-  ],
   "かずみ": [
     "一心",
     "一澄",
@@ -9885,14 +9563,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "菜南瀬",
     "菜那瀬"
   ],
-  "なあ": [
-    "七葵",
-    "凪葵",
-    "南空",
-    "名彩",
-    "奈亜",
-    "菜愛"
-  ],
   "まおう": [
     "万央",
     "摩央",
@@ -10015,14 +9685,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "瀬那",
     "聖菜"
   ],
-  "ちゅう": [
-    "中",
-    "仲",
-    "宙",
-    "忠",
-    "抽",
-    "紬"
-  ],
   "のあ": [
     "乃亜",
     "乃彩",
@@ -10057,12 +9719,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "暖音",
     "音",
     "音乃"
-  ],
-  "のあお": [
-    "乃碧",
-    "乃葵",
-    "乃蒼",
-    "乃青"
   ],
   "ひさし": [
     "久",
@@ -11040,14 +10696,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "樹里",
     "珠理"
   ],
-  "よりま": [
-    "依真",
-    "依茉",
-    "依麻",
-    "頼真",
-    "頼茉",
-    "頼麻"
-  ],
   "えま": [
     "依茉",
     "咲茉",
@@ -11399,14 +11047,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "結心",
     "結衣子"
   ],
-  "ゆいつき": [
-    "優衣月",
-    "唯衣月",
-    "夕衣月",
-    "悠衣月",
-    "由衣月",
-    "結月"
-  ],
   "ゆいな": [
     "優衣菜",
     "唯愛",
@@ -11446,14 +11086,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "玄",
     "絃",
     "言"
-  ],
-  "げんは": [
-    "元葉",
-    "幻葉",
-    "弦葉",
-    "源葉",
-    "玄葉",
-    "絃葉"
   ],
   "あつし": [
     "充",
@@ -11526,14 +11158,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "浩希",
     "航基",
     "輝"
-  ],
-  "こうり": [
-    "光莉",
-    "小里",
-    "幸理",
-    "紅梨",
-    "虹李",
-    "香里"
   ],
   "ひより": [
     "光莉",
@@ -11900,14 +11524,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "直緒",
     "菜緒"
   ],
-  "おうと": [
-    "凰人",
-    "凰徒",
-    "凰斗",
-    "凰杜",
-    "凰翔",
-    "桜都"
-  ],
   "りあ": [
     "利亜",
     "李愛",
@@ -12025,14 +11641,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "蒼真",
     "颯真"
   ],
-  "そうお": [
-    "創緒",
-    "壮緒",
-    "宗桜",
-    "湊音",
-    "蒼央",
-    "颯生"
-  ],
   "そうしょう": [
     "創翔",
     "双翔",
@@ -12044,14 +11652,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "爽彰",
     "蒼昇",
     "蒼翔"
-  ],
-  "そうい": [
-    "創衣",
-    "奏伊",
-    "爽唯",
-    "荘維",
-    "蒼依",
-    "颯衣"
   ],
   "いさむ": [
     "勇",
@@ -12280,14 +11880,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "裕将",
     "陽大"
   ],
-  "ともま": [
-    "友真",
-    "斗磨",
-    "朋麻",
-    "朝馬",
-    "燈真",
-    "知茉"
-  ],
   "そうと": [
     "双杜",
     "壮人",
@@ -12426,14 +12018,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "絵南",
     "絵菜",
     "英那"
-  ],
-  "さくらと": [
-    "咲空都",
-    "咲良都",
-    "朔羅都",
-    "桜楽都",
-    "桜都",
-    "紗紅都"
   ],
   "さとし": [
     "哲",
@@ -12625,14 +12209,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "蒼空",
     "陽"
   ],
-  "そうね": [
-    "奏音",
-    "想音",
-    "湊音",
-    "爽音",
-    "蒼音",
-    "颯音"
-  ],
   "しょうた": [
     "奨太",
     "将太",
@@ -12747,14 +12323,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "美登里",
     "美鳥",
     "翠"
-  ],
-  "みさく": [
-    "実咲",
-    "実桜",
-    "未咲",
-    "美作",
-    "美咲",
-    "美朔"
   ],
   "みお": [
     "実央",
@@ -13646,14 +13214,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "風磨",
     "風馬"
   ],
-  "ふうはな": [
-    "楓花",
-    "楓華",
-    "楓葉",
-    "風花",
-    "風華",
-    "風葉"
-  ],
   "みずき": [
     "水希",
     "水樹",
@@ -13882,14 +13442,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "青人",
     "青翔"
   ],
-  "あおひと": [
-    "碧人",
-    "碧仁",
-    "碧斗",
-    "葵人",
-    "蒼人",
-    "青人"
-  ],
   "あおた": [
     "碧太",
     "碧汰",
@@ -13899,14 +13451,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "蒼太",
     "蒼汰",
     "青汰"
-  ],
-  "あおしん": [
-    "碧新",
-    "葵信",
-    "蒼心",
-    "蒼真",
-    "藍臣",
-    "青心"
   ],
   "あおま": [
     "碧真",
@@ -13922,14 +13466,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "蒼穹",
     "蒼空",
     "青宙",
-    "青空"
-  ],
-  "あおく": [
-    "碧空",
-    "蒼久",
-    "蒼玖",
-    "蒼矩",
-    "蒼空",
     "青空"
   ],
   "しゃな": [
@@ -13980,13 +13516,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "美由",
     "美結"
   ],
-  "びお": [
-    "美央",
-    "美旺",
-    "美桜",
-    "美生",
-    "美緒"
-  ],
   "みみ": [
     "美実",
     "美弥",
@@ -14026,13 +13555,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "駆",
     "駈"
   ],
-  "とぶ": [
-    "翔",
-    "翔舞",
-    "翔飛",
-    "跳",
-    "飛"
-  ],
   "かけた": [
     "翔多",
     "翔大",
@@ -14040,14 +13562,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "翔拓",
     "翔汰",
     "翔田"
-  ],
-  "かざはな": [
-    "花風",
-    "華風",
-    "風羽",
-    "風花",
-    "風英",
-    "風華"
   ],
   "めばえ": [
     "芽映",
@@ -14064,13 +13578,5 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "陽南",
     "陽菜",
     "陽那"
-  ],
-  "りくしょう": [
-    "陸将",
-    "陸承",
-    "陸昇",
-    "陸昌",
-    "陸正",
-    "陸翔"
   ]
 };

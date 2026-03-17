@@ -48,20 +48,6 @@ export const scores = {
     "traditional": 0.4,
     "rarity": 0.25
   },
-  "あおく": {
-    "masculinity": 0.65,
-    "femininity": 0.35,
-    "softness": 0.7,
-    "traditional": 0.5,
-    "rarity": 0.75
-  },
-  "あおしん": {
-    "masculinity": 0.75,
-    "femininity": 0.25,
-    "softness": 0.6,
-    "traditional": 0.4,
-    "rarity": 0.7
-  },
   "あおぞら": {
     "masculinity": 0.3,
     "femininity": 0.7,
@@ -82,13 +68,6 @@ export const scores = {
     "softness": 0.6,
     "traditional": 0.4,
     "rarity": 0.5
-  },
-  "あおひと": {
-    "masculinity": 0.65,
-    "femininity": 0.35,
-    "softness": 0.7,
-    "traditional": 0.4,
-    "rarity": 0.75
   },
   "あおま": {
     "masculinity": 0.45,
@@ -356,13 +335,6 @@ export const scores = {
     "traditional": 0.4,
     "rarity": 0.6
   },
-  "いちみ": {
-    "masculinity": 0.45,
-    "femininity": 0.55,
-    "softness": 0.7,
-    "traditional": 0.6,
-    "rarity": 0.65
-  },
   "いっか": {
     "masculinity": 0.65,
     "femininity": 0.35,
@@ -559,13 +531,6 @@ export const scores = {
     "traditional": 0.6,
     "rarity": 0.3
   },
-  "おうと": {
-    "masculinity": 0.85,
-    "femininity": 0.15,
-    "softness": 0.3,
-    "traditional": 0.7,
-    "rarity": 0.65
-  },
   "おと": {
     "masculinity": 0.6,
     "femininity": 0.4,
@@ -649,13 +614,6 @@ export const scores = {
     "softness": 0.5,
     "traditional": 0.4,
     "rarity": 0.7
-  },
-  "かざはな": {
-    "masculinity": 0.2,
-    "femininity": 0.85,
-    "softness": 0.9,
-    "traditional": 0.65,
-    "rarity": 0.75
   },
   "かずか": {
     "masculinity": 0.6,
@@ -811,13 +769,6 @@ export const scores = {
     "traditional": 0.6,
     "rarity": 0.3
   },
-  "げんは": {
-    "masculinity": 0.75,
-    "femininity": 0.25,
-    "softness": 0.4,
-    "traditional": 0.6,
-    "rarity": 0.7
-  },
   "げんよう": {
     "masculinity": 0.75,
     "femininity": 0.25,
@@ -845,13 +796,6 @@ export const scores = {
     "softness": 0.45,
     "traditional": 0.6,
     "rarity": 0.3
-  },
-  "こうり": {
-    "masculinity": 0.7,
-    "femininity": 0.3,
-    "softness": 0.45,
-    "traditional": 0.6,
-    "rarity": 0.65
   },
   "ここ": {
     "masculinity": 0.3,
@@ -1034,13 +978,6 @@ export const scores = {
     "softness": 0.9,
     "traditional": 0.75,
     "rarity": 0.3
-  },
-  "さくらと": {
-    "masculinity": 0.2,
-    "femininity": 0.85,
-    "softness": 0.9,
-    "traditional": 0.6,
-    "rarity": 0.75
   },
   "さと": {
     "masculinity": 0.5,
@@ -1399,20 +1336,6 @@ export const scores = {
     "traditional": 0.5,
     "rarity": 0.3
   },
-  "そうい": {
-    "masculinity": 0.45,
-    "femininity": 0.55,
-    "softness": 0.7,
-    "traditional": 0.3,
-    "rarity": 0.65
-  },
-  "そうお": {
-    "masculinity": 0.7,
-    "femininity": 0.3,
-    "softness": 0.6,
-    "traditional": 0.5,
-    "rarity": 0.65
-  },
   "そうしょう": {
     "masculinity": 0.75,
     "femininity": 0.25,
@@ -1461,13 +1384,6 @@ export const scores = {
     "softness": 0.4,
     "traditional": 0.6,
     "rarity": 0.8
-  },
-  "そうね": {
-    "masculinity": 0.1,
-    "femininity": 0.85,
-    "softness": 0.9,
-    "traditional": 0.3,
-    "rarity": 0.75
   },
   "そうま": {
     "masculinity": 0.85,
@@ -1651,13 +1567,6 @@ export const scores = {
     "traditional": 0.4,
     "rarity": 0.3
   },
-  "ちゅう": {
-    "masculinity": 0.6,
-    "femininity": 0.4,
-    "softness": 0.7,
-    "traditional": 0.3,
-    "rarity": 0.65
-  },
   "つばき": {
     "masculinity": 0.4,
     "femininity": 0.6,
@@ -1734,27 +1643,6 @@ export const scores = {
     "softness": 0.7,
     "traditional": 0.6,
     "rarity": 0.4
-  },
-  "とぶ": {
-    "masculinity": 0.75,
-    "femininity": 0.25,
-    "softness": 0.4,
-    "traditional": 0.6,
-    "rarity": 0.7
-  },
-  "ともま": {
-    "masculinity": 0.45,
-    "femininity": 0.55,
-    "softness": 0.7,
-    "traditional": 0.4,
-    "rarity": 0.65
-  },
-  "なあ": {
-    "masculinity": 0.7,
-    "femininity": 0.3,
-    "softness": 0.8,
-    "traditional": 0.4,
-    "rarity": 0.75
   },
   "なお": {
     "masculinity": 0.5,
@@ -1881,13 +1769,6 @@ export const scores = {
     "softness": 0.9,
     "traditional": 0.3,
     "rarity": 0.6
-  },
-  "のあお": {
-    "masculinity": 0.2,
-    "femininity": 0.8,
-    "softness": 0.85,
-    "traditional": 0.3,
-    "rarity": 0.65
   },
   "のどか": {
     "masculinity": 0.2,
@@ -2302,13 +2183,6 @@ export const scores = {
     "traditional": 0.6,
     "rarity": 0.75
   },
-  "びお": {
-    "masculinity": 0.45,
-    "femininity": 0.55,
-    "softness": 0.7,
-    "traditional": 0.3,
-    "rarity": 0.65
-  },
   "ふう": {
     "masculinity": 0.45,
     "femininity": 0.55,
@@ -2343,13 +2217,6 @@ export const scores = {
     "softness": 0.45,
     "traditional": 0.3,
     "rarity": 0.7
-  },
-  "ふうはな": {
-    "masculinity": 0.2,
-    "femininity": 0.8,
-    "softness": 0.75,
-    "traditional": 0.3,
-    "rarity": 0.65
   },
   "ふうま": {
     "masculinity": 0.85,
@@ -2546,13 +2413,6 @@ export const scores = {
     "softness": 0.75,
     "traditional": 0.6,
     "rarity": 0.3
-  },
-  "みさく": {
-    "masculinity": 0.65,
-    "femininity": 0.35,
-    "softness": 0.7,
-    "traditional": 0.5,
-    "rarity": 0.75
   },
   "みさくら": {
     "masculinity": 0.2,
@@ -2833,13 +2693,6 @@ export const scores = {
     "softness": 0.7,
     "traditional": 0.4,
     "rarity": 0.6
-  },
-  "ゆいつき": {
-    "masculinity": 0.3,
-    "femininity": 0.7,
-    "softness": 0.85,
-    "traditional": 0.4,
-    "rarity": 0.75
   },
   "ゆいと": {
     "masculinity": 0.65,
@@ -3170,13 +3023,6 @@ export const scores = {
     "traditional": 0.4,
     "rarity": 0.6
   },
-  "よりま": {
-    "masculinity": 0.3,
-    "femininity": 0.7,
-    "softness": 0.85,
-    "traditional": 0.4,
-    "rarity": 0.75
-  },
   "らな": {
     "masculinity": 0.3,
     "femininity": 0.7,
@@ -3232,13 +3078,6 @@ export const scores = {
     "softness": 0.6,
     "traditional": 0.4,
     "rarity": 0.3
-  },
-  "りくしょう": {
-    "masculinity": 0.85,
-    "femininity": 0.15,
-    "softness": 0.45,
-    "traditional": 0.7,
-    "rarity": 0.65
   },
   "りくと": {
     "masculinity": 0.85,
