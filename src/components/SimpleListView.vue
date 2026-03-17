@@ -122,15 +122,13 @@ const filters = ref({
 const rarityLevels = [
   { value: 1, label: 'Lv1 (普通)' },
   { value: 2, label: 'Lv2' },
-  { value: 3, label: 'Lv3' },
-  { value: 4, label: 'Lv4 (珍しい)' }
+  { value: 3, label: 'Lv3 (珍しい)' }
 ];
 
 const getRarityLevel = (rarity: number): number => {
-  if (rarity < 0.30) return 1;
-  if (rarity < 0.50) return 2;
-  if (rarity < 0.65) return 3;
-  return 4;
+  if (rarity < 0.50) return 1;
+  if (rarity < 0.65) return 2;
+  return 3;
 };
 
 const filteredNamesForList = computed(() => {
