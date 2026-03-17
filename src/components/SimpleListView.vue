@@ -129,9 +129,9 @@ const rarityLevels = [
 
 const getRarityLevel = (rarity: number): number => {
   if (rarity < 0.25) return 1;
-  if (rarity < 0.4) return 2;
-  if (rarity < 0.55) return 3;
-  if (rarity < 0.7) return 4;
+  if (rarity < 0.35) return 2;
+  if (rarity < 0.50) return 3;
+  if (rarity < 0.65) return 4;
   return 5;
 };
 
