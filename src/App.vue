@@ -1,59 +1,43 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import NameMap from './components/NameMap.vue';
-import NameList from './components/NameList.vue';
+import SimpleListView from './components/SimpleListView.vue';
 import NameDetail from './components/NameDetail.vue';
 import type { NameScore } from './utils/nameData';
 import { getNameScores } from './utils/nameData';
 
 const allNames = ref<NameScore[]>([]);
-const filteredNames = ref<NameScore[]>([]);
 const selectedName = ref<NameScore | null>(null);
 
-// データ初期化
 onMounted(() => {
   allNames.value = getNameScores();
-  filteredNames.value = allNames.value;
 });
 
-// 名前選択処理
 const handleSelectName = (name: NameScore | null) => {
   selectedName.value = name;
-};
-
-// フィルタ更新処理
-const handleUpdateFilter = (names: NameScore[]) => {
-  filteredNames.value = names;
 };
 </script>
 
 <template>
   <div class="app-grid">
-    <!-- ヘッダ -->
     <header class="header">
       <div class="header-content">
         <h1 class="header-title">キャラクター命名支援ツール</h1>
       </div>
     </header>
     
-    <!-- メインマップエリア -->
     <main class="main-area">
-      <NameMap 
-        :names="filteredNames" 
+      <SimpleListView 
+        :names="allNames"
         :selected-name="selectedName"
         @select-name="handleSelectName"
       />
     </main>
     
-    <!-- サイドパネル -->
     <aside class="sidebar">
       <div v-if="!selectedName" class="sidebar-content">
-        <NameList 
-          :names="allNames"
-          :selected-name="selectedName"
-          @select-name="handleSelectName"
-          @update-filter="handleUpdateFilter"
-        />
+        <div class="placeholder">
+          <p>名前を選択すると詳細が表示されます</p>
+        </div>
       </div>
       <div v-else class="sidebar-content">
         <NameDetail 
@@ -130,6 +114,15 @@ const handleUpdateFilter = (names: NameScore[]) => {
 .sidebar-content {
   height: 100%;
   overflow: hidden;
+}
+
+.placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
 }
 
 /* レスポンシブ対応 */
