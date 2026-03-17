@@ -109,7 +109,7 @@ const emit = defineEmits<{
   selectName: [name: NameScore | null];
 }>();
 
-const currentView = ref<'plot' | 'list'>('plot');
+const currentView = ref<'plot' | 'list'>('list');
 const searchQuery = ref('');
 
 const filters = ref({
