@@ -615,13 +615,6 @@ export const scores = {
     "traditional": 0.3,
     "rarity": 0.65
   },
-  "かえしん": {
-    "masculinity": 0.75,
-    "femininity": 0.25,
-    "softness": 0.45,
-    "traditional": 0.6,
-    "rarity": 0.7
-  },
   "かえで": {
     "masculinity": 0.3,
     "femininity": 0.7,
@@ -3372,13 +3365,6 @@ export const scores = {
     "softness": 0.6,
     "traditional": 0.5,
     "rarity": 0.45
-  },
-  "りょうひさ": {
-    "masculinity": 0.85,
-    "femininity": 0.15,
-    "softness": 0.45,
-    "traditional": 0.6,
-    "rarity": 0.7
   },
   "りょうま": {
     "masculinity": 0.85,

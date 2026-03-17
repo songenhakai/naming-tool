@@ -1,5 +1,5 @@
 // 自動生成された名前辞書
-// 生成日時: 2026/3/17 17:56:11
+// 生成日時: 2026/3/17 18:17:48
 
 // 漢字から読み方を検索する辞書
 export const KANJI_TO_READING: Record<string, string[]> = {
@@ -441,9 +441,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "あきら",
     "すけ",
     "りょう"
-  ],
-  "亮久": [
-    "りょうひさ"
   ],
   "亮人": [
     "あきひと"
@@ -1134,8 +1131,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "凌久": [
     "ひさき",
     "りく",
-    "りょうく",
-    "りょうひさ"
+    "りょうく"
   ],
   "凌真": [
     "りょうま"
@@ -4706,7 +4702,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "ふう"
   ],
   "楓心": [
-    "かえしん",
     "ふうしん"
   ],
   "楓摩": [
@@ -4715,9 +4710,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "楓斗": [
     "ふうと"
   ],
-  "楓新": [
-    "かえしん"
-  ],
   "楓歩": [
     "ふう"
   ],
@@ -4725,7 +4717,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "ふうた"
   ],
   "楓真": [
-    "かえしん",
     "かずま",
     "ふうしん",
     "ふうま"
@@ -4754,9 +4745,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "楓葉": [
     "ふうはな"
-  ],
-  "楓進": [
-    "かえしん"
   ],
   "楓音": [
     "かえで",
@@ -5215,8 +5203,7 @@ export const KANJI_TO_READING: Record<string, string[]> = {
     "りょう"
   ],
   "涼久": [
-    "りょうく",
-    "りょうひさ"
+    "りょうく"
   ],
   "涼人": [
     "りょうじん"
@@ -7391,9 +7378,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "良奈": [
     "らな"
   ],
-  "良尚": [
-    "りょうひさ"
-  ],
   "良真": [
     "りょうしん",
     "りょうま"
@@ -8100,9 +8084,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "諒": [
     "りょう"
   ],
-  "諒久": [
-    "りょうひさ"
-  ],
   "諒人": [
     "りょうじん"
   ],
@@ -8325,9 +8306,6 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   ],
   "遼": [
     "りょう"
-  ],
-  "遼久": [
-    "りょうひさ"
   ],
   "遼仁": [
     "りょうじん"
@@ -9219,14 +9197,8 @@ export const KANJI_TO_READING: Record<string, string[]> = {
   "魁将": [
     "かいしょう"
   ],
-  "魁心": [
-    "かえしん"
-  ],
   "魁斗": [
     "かいと"
-  ],
-  "魁進": [
-    "かえしん"
   ],
   "鮮春": [
     "せんしゅん"
@@ -10435,14 +10407,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "綾",
     "諒",
     "遼"
-  ],
-  "りょうひさ": [
-    "亮久",
-    "凌久",
-    "涼久",
-    "良尚",
-    "諒久",
-    "遼久"
   ],
   "あきひと": [
     "亮人",
@@ -13665,14 +13629,6 @@ export const READING_TO_KANJI: Record<string, string[]> = {
     "風太",
     "風汰",
     "颯汰"
-  ],
-  "かえしん": [
-    "楓心",
-    "楓新",
-    "楓真",
-    "楓進",
-    "魁心",
-    "魁進"
   ],
   "ふうしん": [
     "楓心",
